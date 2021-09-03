@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_outline_home_24" />
+    <item android:id="@+id/action_bible"
+        android:title="@string/bible"
+        android:icon="@drawable/ic_outline_menu_book_24" />
+    <item android:id="@+id/action_more"
+        android:title="@string/more"
+        android:icon="@drawable/ic_outline_more_horiz_24" />
+</menu>

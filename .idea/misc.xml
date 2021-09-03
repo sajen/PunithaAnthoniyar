@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Sajen/workspace_git/PunithaAnthoniyar/app/src/main/res/drawable/ic_outline_auto_awesome_24.xml" value="0.20833333333333334" />
+        <entry key="..\:/Sajen/workspace_git/PunithaAnthoniyar/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Sajen/workspace_git/PunithaAnthoniyar/app/src/main/res/layout/bible_fragment.xml" value="0.1921875" />
+        <entry key="..\:/Sajen/workspace_git/PunithaAnthoniyar/app/src/main/res/layout/hom_gallery_image_view.xml" value="0.17685185185185184" />
+        <entry key="..\:/Sajen/workspace_git/PunithaAnthoniyar/app/src/main/res/layout/home_fragment.xml" value="0.22" />
+        <entry key="..\:/Sajen/workspace_git/PunithaAnthoniyar/app/src/main/res/layout/material_tool_bar.xml" value="0.1921875" />
+        <entry key="..\:/Sajen/workspace_git/PunithaAnthoniyar/app/src/main/res/menu/drawer_view.xml" value="0.1921875" />
+        <entry key="..\:/Sajen/workspace_git/PunithaAnthoniyar/app/src/main/res/menu/navigation_menu.xml" value="0.1921875" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

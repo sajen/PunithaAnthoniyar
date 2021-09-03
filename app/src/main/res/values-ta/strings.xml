@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">புனித அந்தோணியார்</string>
+
+    <string name="antony_church">புனித அந்தோணியார் ஆலயம்</string>
+    <string name="ramesh_nagar">ரமேஷ் நகர்</string>
+    
+    <string name="verse_of_day">இன்றைய வசனம்</string>
+    <string name="saint_of_day">இன்றைய புனிதர்</string>
+    <string name="mass_timing">திருப்பலி நேரம்</string>
+    <string name="today_prayer">இன்றைய ஜெபம்</string>
+    <string name="about">எங்களைப் பற்றி</string>
+    
+    <string name="home">முகப்பு</string>
+    <string name="bible">திருவிவிலியம்</string>
+    <string name="more">மேலும்</string>
+
+    <string name="language">மொழி</string>
+    <string name="tamil">தமிழ்</string>
+    <string name="english">English</string>
+
+    <string name="ok">Ok</string>
+    <string name="close">Close</string>
+
+    <string name="select_lang">Select an Language</string>
+</resources>

@@ -3,4 +3,30 @@
 
     <string name="antony_church">St.Antony Church</string>
     <string name="ramesh_nagar">Ramesh Nagar</string>
+    
+    <string name="verse_of_day">Verse Of The Day</string>
+    <string name="saint_of_day">Saint Of The Day</string>
+    <string name="mass_timing">Mass Timing</string>
+    <string name="today_prayer">Today Prayer</string>
+    <string name="about">About</string>
+    
+    <string name="home">Home</string>
+    <string name="bible">Bible</string>
+    <string name="more">More</string>
+
+    <string name="language">Language</string>
+
+    <string name="tamil">தமிழ்</string>
+    <string name="english">English</string>
+
+    <string name="select_lang">Select an Language</string>
+
+    <string name="ok">Ok</string>
+    <string name="close">Close</string>
+
+    <string-array name="lang_array">
+        <item>English</item>
+        <item>Tamil</item>
+    </string-array>
+
 </resources>

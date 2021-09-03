@@ -7,4 +7,18 @@
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_full">#FFFFFF</color>
+    <color name="red">#F80202</color>
+
+    <color name="toolbar_title">#fffefe</color>
+
+    <color name="txt_color">#333333</color>
+    <color name="tint_primary_color">#4D4D4D</color>
+
+    <color name="bg_color">#FBFBFB</color>
+    <color name="verse_color">#F66DD0</color>
+    <color name="saint_color">#78BAF8</color>
+    <color name="mass_tme_colr">#80E590</color>
+    <color name="today_prayer_color">#A178F8</color>
+    <color name="about_color">#FF7B7B</color>
 </resources>

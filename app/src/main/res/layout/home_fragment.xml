@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navigation">
+
+        <RelativeLayout
+            android:id="@+id/pager_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.church.punithaanthoniyar.customviews.recyclerviewpager.RecyclerViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_210sdp"
+                android:clipToPadding="false"
+                app:rvp_singlePageFling="true"
+                app:rvp_triggerOffset="0.1" />
+
+            <com.church.punithaanthoniyar.customviews.scrollingpagerindicator.ScrollingPagerIndicator
+                android:id="@+id/scroll_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/viewpager"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:spi_dotColor="@color/white_full"
+                app:spi_dotSelectedColor="@color/color_primary" />
+
+        </RelativeLayout>
+
+        <com.opensooq.pluto.PlutoView
+            android:id="@+id/slider_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            app:indicator_visibility="true" />
+
+        <com.opensooq.pluto.PlutoIndicator
+            android:id="@+id/custom_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:selected_color="#555555"
+            app:selected_height="8dp"
+            app:selected_padding_left="3dp"
+            app:selected_padding_right="3dp"
+            app:selected_width="8dp"
+            app:shape="oval"
+            app:unselected_color="#55555555"
+            app:unselected_height="4dp"
+            app:unselected_padding_left="3dp"
+            app:unselected_padding_right="3dp"
+            app:unselected_width="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/slider_view"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/verse_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_below="@+id/slider_view"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="@dimen/_2sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_full">
+
+                <View
+                    android:id="@+id/verse_view"
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/verse_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/verse_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:src="@drawable/ic_outline_auto_awesome_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/verse_view"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/verse_day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="@string/verse_of_day"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/_16sdp"
+                    app:fontFamily="@font/roboto_medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/verse_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_baseline_navigate_next_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/saint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_below="@+id/verse_layout"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="@dimen/_2sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_full">
+
+                <View
+                    android:id="@+id/saint_view"
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/saint_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/saint_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:src="@drawable/ic_outline_assignment_ind_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/saint_view"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saint_day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="@string/saint_of_day"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/_16sdp"
+                    app:fontFamily="@font/roboto_medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/saint_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_baseline_navigate_next_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mass_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_below="@+id/saint_layout"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="@dimen/_2sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_full">
+
+                <View
+                    android:id="@+id/mass_view"
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/mass_tme_colr"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/mass_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:src="@drawable/ic_outline_access_time_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/mass_view"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mass_day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="@string/mass_timing"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/_16sdp"
+                    app:fontFamily="@font/roboto_medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/mass_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_baseline_navigate_next_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/prayer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_below="@+id/mass_layout"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="@dimen/_2sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_full">
+
+                <View
+                    android:id="@+id/prayer_view"
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/today_prayer_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/prayer_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:src="@drawable/ic_outline_sticky_note_2_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/prayer_view"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/prayer_day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="@string/today_prayer"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/_16sdp"
+                    app:fontFamily="@font/roboto_medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/prayer_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_baseline_navigate_next_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/about_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_below="@+id/prayer_layout"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="@dimen/_2sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_full">
+
+                <View
+                    android:id="@+id/about_view"
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/about_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/about_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:src="@drawable/ic_outline_info_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/about_view"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/about_day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="@string/about"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/_16sdp"
+                    app:fontFamily="@font/roboto_medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/about_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_baseline_navigate_next_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>
