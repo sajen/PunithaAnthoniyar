@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".todayprayer.TodayPrayerActivity"
+    android:background="@color/bg_color">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/material_tool_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/prayer_topic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:text="@string/dummy_prayer_topic"
+        android:ellipsize="end"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textColor="@color/txt_color"
+        android:maxLines="1"
+        app:layout_constraintRight_toLeftOf="@+id/prayer_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:textSize="@dimen/_15sdp"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:lineSpacingExtra="@dimen/_8sdp"
+        android:background="@color/white_full"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/prayer_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/roboto_light"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/prayer_topic"
+        app:layout_constraintBottom_toBottomOf="@+id/prayer_topic"
+        android:textColor="@color/txt_sec_color"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:background="@color/white_full"
+        android:text="Thu, August 12, 2021"
+        android:textSize="@dimen/_15sdp"
+        android:lineSpacingExtra="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingRight="@dimen/_15sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/prayer_desc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:fontFamily="@font/roboto_regular"
+        app:layout_constraintTop_toBottomOf="@+id/prayer_topic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/txt_color"
+        android:background="@color/white_full"
+        android:text="@string/dummy_prayer"
+        android:textSize="@dimen/_15sdp"
+        android:scrollbars="vertical"
+        android:scrollIndicators="none"
+        android:lineSpacingExtra="@dimen/_8sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_15sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

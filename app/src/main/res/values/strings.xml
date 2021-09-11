@@ -3,13 +3,13 @@
 
     <string name="antony_church">St.Antony Church</string>
     <string name="ramesh_nagar">Ramesh Nagar</string>
-    
+
     <string name="verse_of_day">Verse Of The Day</string>
     <string name="saint_of_day">Saint Of The Day</string>
     <string name="mass_timing">Mass Timing</string>
     <string name="today_prayer">Today Prayer</string>
     <string name="about">About</string>
-    
+
     <string name="home">Home</string>
     <string name="bible">Bible</string>
     <string name="more">More</string>
@@ -24,9 +24,25 @@
     <string name="ok">Ok</string>
     <string name="close">Close</string>
 
+    <string name="dummy_prayer_topic">Prayer for the Forgiveness of Sins</string>
+    <string name="dummy_prayer">Lord our God, we thank you for the trust you have put into our hearts. We thank you for all the signs of your goodness that comfort us when we are in great need and when many deaths take place around us and touch each of us. We thank you for comforting us, for always giving us fresh courage wherever we may be, and for giving us hope for other people, who also struggle hard to find what is good. O Lord God, bless our world with power from on high, with your gifts that bring good to many people. Bless our world. Save it from sin, from ruin, from every kind of despair. Give your blessing, O Lord our God! As you bless us, so bless all the world, to the glory of your name. Amen. Lord our God, we thank you for the trust you have put into our hearts. We thank you for all the signs of your goodness that comfort us when we are in great need and when many deaths take place around us and touch each of us. We thank you for comforting us, for always giving us fresh courage wherever we may be, and for giving us hope for other people, who also struggle hard to find what is good. O Lord God, bless our world with power from on high, with your gifts that bring good to many people. Bless our world. Save it from sin, from ruin, from every kind of despair. Give your blessing, O Lord our God! As you bless us, so bless all the world, to the glory of your name. Amen.</string>
+
     <string-array name="lang_array">
         <item>English</item>
         <item>Tamil</item>
     </string-array>
+
+    <string name="calendar">Calendar</string>
+    
+    <string name="every_sunday">Every Sunday</string>
+    <string name="sunday_time">Morning 07.00 AM - Holy Mass</string>
+    <string name="every_tuesday">Every Tuesday</string>
+    <string name="tuesday_time_adoration">Evening 06.30 PM - Anthony’s special Rosary</string>
+    <string name="tues_mass">Evening 07.00 PM - Holy Mass</string>
+    <string name="every_first_tues">Every First Tuesday</string>
+    <string name="every_first_tues_time_procession">Evening 06.00 PM - Blessings of Car Procession</string>
+    <string name="every_first_tues_adoration">Evening 06.30 PM - Eucharistic Adoration</string>
+    <string name="every_first_tues_mass">Evening 07.00 PM - Consecration Mass &amp;
+                                                            \n Blessings of Holy oil</string>
 
 </resources>

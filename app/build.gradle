@@ -57,5 +57,15 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.3'
 
+    implementation platform('com.google.firebase:firebase-bom:28.4.0')
+    implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
+    implementation 'com.google.firebase:firebase-firestore-ktx:23.0.3'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.1'
+    implementation 'com.firebaseui:firebase-ui-storage:3.2.1'
+
+    implementation 'com.google.firebase:firebase-messaging'
+
 
 }
+apply plugin: 'com.google.gms.google-services'

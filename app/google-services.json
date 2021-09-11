@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "393591915733",
+    "project_id": "antonychurch-a68f2",
+    "storage_bucket": "antonychurch-a68f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393591915733:android:40b9e3807722aa5a4ece5c",
+        "android_client_info": {
+          "package_name": "com.church.punithaanthoniyar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393591915733-4m2d54oh13q7t3do435kp256n22f5ecn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKL7tRjYqm74Y9X-ANowDskpgAb0AlAO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393591915733-4m2d54oh13q7t3do435kp256n22f5ecn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

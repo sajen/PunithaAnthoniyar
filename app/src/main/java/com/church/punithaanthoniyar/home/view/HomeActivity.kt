@@ -1,4 +1,4 @@
-package com.church.punithaanthoniyar.home
+package com.church.punithaanthoniyar.home.view
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -10,7 +10,6 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -109,7 +108,7 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         layout.isMeasurementCacheEnabled = false
         imageList.layoutManager = layout
 
-        val imageListAdapter:ImageListAdapter = ImageListAdapter(this, arrayListOf())
+        val imageListAdapter: ImageListAdapter = ImageListAdapter(this, arrayListOf())
 
         imageList.adapter = imageListAdapter
         val recyclerIndicator: ScrollingPagerIndicator = findViewById(R.id.scroll_indicator)

@@ -42,6 +42,7 @@
             android:id="@+id/slider_view"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_200sdp"
+            app:auto_cycle="false"
             app:indicator_visibility="true" />
 
         <com.opensooq.pluto.PlutoIndicator
@@ -49,17 +50,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            app:selected_color="#555555"
-            app:selected_height="8dp"
+            app:selected_color="@color/indicator_selected_color"
+            app:selected_height="@dimen/_8sdp"
             app:selected_padding_left="3dp"
             app:selected_padding_right="3dp"
-            app:selected_width="8dp"
+            app:selected_width="@dimen/_8sdp"
             app:shape="oval"
-            app:unselected_color="#55555555"
-            app:unselected_height="4dp"
+            app:unselected_color="@color/white"
+            app:unselected_height="@dimen/_8sdp"
             app:unselected_padding_left="3dp"
             app:unselected_padding_right="3dp"
-            app:unselected_width="4dp"
+            app:unselected_width="@dimen/_8sdp"
             android:layout_centerHorizontal="true"
             android:layout_alignBottom="@+id/slider_view"
             android:layout_marginBottom="@dimen/_10sdp"/>
@@ -133,7 +134,7 @@
             android:layout_height="@dimen/_55sdp"
             android:layout_below="@+id/verse_layout"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_18sdp"
             android:layout_marginRight="@dimen/_20sdp"
             app:cardCornerRadius="@dimen/_4sdp"
             app:cardElevation="@dimen/_2sdp">
@@ -196,7 +197,7 @@
             android:layout_height="@dimen/_55sdp"
             android:layout_below="@+id/saint_layout"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_18sdp"
             android:layout_marginRight="@dimen/_20sdp"
             app:cardCornerRadius="@dimen/_4sdp"
             app:cardElevation="@dimen/_2sdp">
@@ -259,7 +260,7 @@
             android:layout_height="@dimen/_55sdp"
             android:layout_below="@+id/mass_layout"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_18sdp"
             android:layout_marginRight="@dimen/_20sdp"
             app:cardCornerRadius="@dimen/_4sdp"
             app:cardElevation="@dimen/_2sdp">
@@ -322,7 +323,8 @@
             android:layout_height="@dimen/_55sdp"
             android:layout_below="@+id/prayer_layout"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
             android:layout_marginRight="@dimen/_20sdp"
             app:cardCornerRadius="@dimen/_4sdp"
             app:cardElevation="@dimen/_2sdp">

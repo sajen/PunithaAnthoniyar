@@ -142,7 +142,6 @@ abstract class BaseActivity : AppCompatActivity(), LifecycleOwner {
             if (isLandscape) ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE else ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
 
-    override fun onBackPressed() {}
     fun startActivity(activity: Class<*>?) {
         val intent = Intent(this, activity)
         startActivity(intent)
