@@ -1,4 +1,4 @@
-package com.church.punithaanthoniyar.masstiming
+package com.church.punithaanthoniyar.verseofday
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,22 +7,23 @@ import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import com.church.punithaanthoniyar.R
 import com.church.punithaanthoniyar.base.BaseActivity
-import com.church.punithaanthoniyar.databinding.ActivityMassTimingBinding
-import com.church.punithaanthoniyar.databinding.ActivityTodayPrayerBinding
+import com.church.punithaanthoniyar.databinding.ActivityAboutBinding
+import com.church.punithaanthoniyar.databinding.ActivityVerseOfDayBinding
 
-class MassTimingActivity : BaseActivity() {
+class VerseOfDayActivity : BaseActivity() {
 
-    private lateinit var binding : ActivityMassTimingBinding
+    private lateinit var binding: ActivityVerseOfDayBinding
+
     override fun initializeDi() {
+
     }
 
     override fun setUpLayout() {
-        binding = ActivityMassTimingBinding.inflate(layoutInflater)
+        binding = ActivityVerseOfDayBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 
     override fun setUpViews() {
-
         setUpToolbar()
     }
 
@@ -36,7 +37,7 @@ class MassTimingActivity : BaseActivity() {
             toolbar.setIcon(null)
             toolbar.elevation = 0f
 
-            setScreenTitle(getString(R.string.mass_timing))
+            setScreenTitle(getString(R.string.verse_of_day))
         }
     }
 

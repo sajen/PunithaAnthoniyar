@@ -36,7 +36,15 @@
     <string name="every_first_tues">Every First Tuesday</string>
     <string name="every_first_tues_time_procession">Evening 06.00 PM - Blessings of Car Procession</string>
     <string name="every_first_tues_adoration">Evening 06.30 PM - Eucharistic Adoration</string>
-    <string name="every_first_tues_mass">Evening 07.00 PM - Consecration Mass &amp;
-                                                            Blessings of Holy oil</string>
+    <string name="every_first_tues_mass">Evening 07.00 PM - Consecration Mass &amp;                                         Blessings of Holy oil</string>
 
+
+    <string name="saint_born"><b>Born :  </b> %s</string>
+    <string name="saint_died"><b>Died :  </b> %s</string>
+
+    <string name="text_to_speech_dummy">தொடக்கத்தில் கடவுள் விண்ணுலகையும், மண்ணுலகையும் படைத்தபொழுது, 2மண்ணுலகு உருவற்று வெறுமையாக இருந்தது. ஆழத்தின் மீது இருள் பரவியிருந்தது. நீர்த்திரளின்மேல் கடவுளின் ஆவி அசைந்தாடிக் கொண்டிருந்தது. 3அப்பொழுது கடவுள், “ஒளி தோன்றுக!” என்றார்; ஒளி தோன்றிற்று. கடவுள் ஒளி நல்லது என்று கண்டார்.</string>
+
+    <string name="saint_about_dummy">Pontian Bishop of his native Rome in 230 but exiled to Sardinia, where he abdicated the papacy during the persecution of the emperor Maximinus in 235. He  succeeded Pope Urban I as pope in the year 230 AD.
+
+During his reign as pope Pontian held a synod which confirmed the excommunication of the great theologian Origen in Alexandria. Pontian was banished to exile by the Roman emperor in 235, and resigned so that a successor could be elected in Rome. n 235.</string>
 </resources>

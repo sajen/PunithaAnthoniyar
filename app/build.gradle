@@ -66,6 +66,7 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-messaging'
 
+    implementation 'androidx.preference:preference-ktx:1.1.1'
 
 }
 apply plugin: 'com.google.gms.google-services'

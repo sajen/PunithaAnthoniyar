@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/_15sdp"
+    android:paddingRight="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:background="@color/white_full">
+
+    <com.church.punithaanthoniyar.customviews.CircleImageView
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:id="@+id/saint_img"
+        android:src="@drawable/ic_baseline_person_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/saint_name"
+        app:layout_constraintLeft_toRightOf="@+id/saint_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Saint Name"
+        android:gravity="start|center_vertical"
+        android:textSize="@dimen/_14sdp"
+        app:fontFamily="@font/roboto_medium"
+        android:textColor="@color/txt_color"
+        android:lineSpacingExtra="@dimen/_8sdp"
+        android:padding="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_10sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/saint_born"
+        app:layout_constraintStart_toStartOf="@+id/saint_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saint_name"
+        android:text="@string/saint_born"
+        android:gravity="start|center_vertical"
+        android:textSize="@dimen/_12sdp"
+        app:fontFamily="@font/roboto_regular"
+        android:textColor="@color/txt_color"
+        android:padding="@dimen/_3sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/saint_died"
+        app:layout_constraintStart_toStartOf="@+id/saint_born"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saint_born"
+        android:text="@string/saint_died"
+        android:gravity="start|center_vertical"
+        android:textSize="@dimen/_12sdp"
+        app:fontFamily="@font/roboto_regular"
+        android:textColor="@color/txt_color"
+        android:padding="@dimen/_3sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/saint_about"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saint_img"
+        android:text="@string/saint_about_dummy"
+        android:textSize="@dimen/_12sdp"
+        app:fontFamily="@font/roboto_regular"
+        android:textColor="@color/txt_color"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:lineSpacingExtra="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

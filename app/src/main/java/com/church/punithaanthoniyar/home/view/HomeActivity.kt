@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.content.res.Resources
+import android.preference.PreferenceManager
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -238,6 +239,7 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         val editor:SharedPreferences.Editor =  sharedPreferences.edit()
         editor.putString("Language",lang)
         editor.apply()
+
     }
 
 

@@ -19,6 +19,15 @@
         android:theme="@style/Theme.PunithaAnthoniyar"
         tools:replace="android:appComponentFactory">
         <activity
+            android:name=".verseofday.VerseOfDayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".saintofday.SaintOfDayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".sendmessage.SendMessageActivity"
+            android:exported="true" />
+        <activity
             android:name=".masstiming.MassTimingActivity"
             android:exported="true" />
         <activity

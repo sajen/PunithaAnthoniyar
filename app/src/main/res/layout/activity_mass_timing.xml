@@ -30,6 +30,7 @@
         android:background="@color/white_full"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:lineSpacingExtra="@dimen/_8sdp"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
 
     <View
@@ -56,6 +57,7 @@
         app:fontFamily="@font/roboto_regular"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:lineSpacingExtra="@dimen/_8sdp"
         app:layout_constraintTop_toBottomOf="@+id/every_sunday_view"/>
 
 
@@ -74,6 +76,7 @@
         android:background="@color/white_full"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:lineSpacingExtra="@dimen/_8sdp"
         app:layout_constraintTop_toBottomOf="@+id/every_sunday_time"/>
 
     <View
@@ -98,6 +101,7 @@
         android:text="@string/tuesday_time_adoration"
         android:textColor="@color/txt_color"
         app:fontFamily="@font/roboto_regular"
+        android:lineSpacingExtra="@dimen/_8sdp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/every_tues_view"/>
@@ -115,6 +119,7 @@
         android:text="@string/tues_mass"
         android:textColor="@color/txt_color"
         app:fontFamily="@font/roboto_regular"
+        android:lineSpacingExtra="@dimen/_8sdp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tues_adoration"/>
@@ -132,6 +137,7 @@
         android:textColor="@color/txt_color"
         app:fontFamily="@font/roboto_medium"
         android:background="@color/white_full"
+        android:lineSpacingExtra="@dimen/_8sdp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tues_mass"/>
@@ -158,6 +164,7 @@
         android:text="@string/tuesday_time_adoration"
         android:textColor="@color/txt_color"
         app:fontFamily="@font/roboto_regular"
+        android:lineSpacingExtra="@dimen/_8sdp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/first_tues_view"/>
@@ -175,6 +182,7 @@
         android:text="@string/tues_mass"
         android:textColor="@color/txt_color"
         app:fontFamily="@font/roboto_regular"
+        android:lineSpacingExtra="@dimen/_8sdp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/first_tues_car"/>
@@ -192,6 +200,7 @@
         android:text="@string/every_first_tues_mass"
         android:textColor="@color/txt_color"
         app:fontFamily="@font/roboto_regular"
+        android:lineSpacingExtra="@dimen/_8sdp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/first_tues_adoration"/>
