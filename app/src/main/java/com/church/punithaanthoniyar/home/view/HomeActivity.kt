@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.content.res.Resources
-import android.preference.PreferenceManager
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -18,7 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.church.punithaanthoniyar.R
 import com.church.punithaanthoniyar.base.BaseActivity
-import com.church.punithaanthoniyar.bible.BibleFragment
+import com.church.punithaanthoniyar.bible.view.BibleFragment
 import com.church.punithaanthoniyar.customviews.recyclerviewpager.RecyclerViewPager
 import com.church.punithaanthoniyar.customviews.scrollingpagerindicator.ScrollingPagerIndicator
 import com.church.punithaanthoniyar.language.LanguageDialogFragment

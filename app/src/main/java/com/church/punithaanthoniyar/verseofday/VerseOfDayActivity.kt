@@ -9,6 +9,7 @@ import com.church.punithaanthoniyar.R
 import com.church.punithaanthoniyar.base.BaseActivity
 import com.church.punithaanthoniyar.databinding.ActivityAboutBinding
 import com.church.punithaanthoniyar.databinding.ActivityVerseOfDayBinding
+import com.google.android.material.tabs.TabLayout
 
 class VerseOfDayActivity : BaseActivity() {
 
@@ -25,6 +26,24 @@ class VerseOfDayActivity : BaseActivity() {
 
     override fun setUpViews() {
         setUpToolbar()
+
+        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+            }
+
+        })
+
+    }
+
+    private fun setTabViews(){
+
     }
 
     private fun setUpToolbar() {

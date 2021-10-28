@@ -28,4 +28,5 @@
     <color name="every_sunday">#FF7B7B</color>
     <color name="every_tuesday">#A178F8</color>
     <color name="every_first_tuesday">#80E590</color>
+    <color name="tab_txt_color">#999999</color>
 </resources>
