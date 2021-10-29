@@ -23,6 +23,7 @@ class BibleListAdapter (private val mList: MutableList<BibleChapter>) : Recycler
 
         val item = mList[position]
         holder.chapterName.text = item.chapterName
+        holder.chapterCount.text = "("+item.count+")"
 
     }
 
@@ -32,5 +33,6 @@ class BibleListAdapter (private val mList: MutableList<BibleChapter>) : Recycler
 
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val chapterName: AppCompatTextView = itemView.findViewById(R.id.bible_chapters)
+        val chapterCount: AppCompatTextView = itemView.findViewById(R.id.bible_chapters_count)
     }
 }

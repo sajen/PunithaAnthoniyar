@@ -11,6 +11,7 @@ import com.church.punithaanthoniyar.bible.IBibleContract
 import com.church.punithaanthoniyar.bible.model.BibleChapter
 import com.church.punithaanthoniyar.bible.presenter.BiblePresenter
 import com.church.punithaanthoniyar.databinding.BibleFragmentBinding
+import com.google.android.material.tabs.TabLayout
 
 class BibleFragment: BaseFragment(),IBibleContract.IBibleViewContract {
 
@@ -31,6 +32,8 @@ class BibleFragment: BaseFragment(),IBibleContract.IBibleViewContract {
     }
 
     override fun init(view: View?) {
+
+
     }
 
     override fun initializeDi() {
@@ -51,12 +54,26 @@ class BibleFragment: BaseFragment(),IBibleContract.IBibleViewContract {
         adapter = BibleListAdapter(data)
         recyclerview.adapter = adapter
 
-        presenter.getChapterList(requireActivity())
+        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                presenter.getChapterList(requireActivity(), tab?.position!!)
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+            }
+
+        })
+
+        presenter.getChapterList(requireActivity(), 0)
 
     }
 
     override fun updateList(chapterList: MutableList<BibleChapter>) {
 
+        data.clear()
         data.addAll(chapterList)
         adapter.notifyDataSetChanged()
     }

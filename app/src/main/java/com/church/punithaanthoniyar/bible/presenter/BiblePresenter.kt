@@ -25,16 +25,18 @@ class BiblePresenter : IBibleContract.IBiblePresenterContract {
         this.view = view
     }
 
-    override fun getChapterList(context : Context) {
+    override fun getChapterList(context : Context,pos : Int) {
 
         val chapters : MutableList<BibleChapter> = mutableListOf()
+
+        val testamentVer = if(pos == 0) "OLD" else "NEW"
 
         try {
             val db = DBUtil(context, ApplicationConfigs.DB_NAME)
             db.createDataBase()
             db.openDataBase()
 
-            val query = "SELECT bn,tn_f from t_bookkey"
+            val query = "SELECT bn,tn_f,chapter_count from t_bookkey where testament_version = '$testamentVer'"
 
             val c = db.selectSQL(query)
             if (c.count > 0) {
@@ -42,6 +44,7 @@ class BiblePresenter : IBibleContract.IBiblePresenterContract {
                     val bibleChapter = BibleChapter()
                     bibleChapter.chapterId = c.getInt(0)
                     bibleChapter.chapterName = c.getString(1).trim()
+                    bibleChapter.count = c.getInt(2)
 
                     chapters.add(bibleChapter)
                 }

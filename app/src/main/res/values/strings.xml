@@ -55,4 +55,7 @@
 During his reign as pope Pontian held a synod which confirmed the excommunication of the great theologian Origen in Alexandria. Pontian was banished to exile by the Roman emperor in 235, and resigned so that a successor could be elected in Rome. n 235.</string>
     <string name="message">Message</string>
     <string name="send">Send</string>
+
+    <string name="old_testament">பழைய ஏற்பாடு</string>
+    <string name="new_testament">புதிய ஏற்பாடு</string>
 </resources>
