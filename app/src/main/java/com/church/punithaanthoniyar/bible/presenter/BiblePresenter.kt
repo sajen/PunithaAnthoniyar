@@ -42,9 +42,54 @@ class BiblePresenter : IBibleContract.IBiblePresenterContract {
             if (c.count > 0) {
                 while (c.moveToNext()) {
                     val bibleChapter = BibleChapter()
-                    bibleChapter.chapterId = c.getInt(0)
+                    bibleChapter.chapterId = c.getLong(0)
                     bibleChapter.chapterName = c.getString(1).trim()
                     bibleChapter.count = c.getInt(2)
+
+                    chapters.add(bibleChapter)
+                }
+                c.close()
+            }
+
+            db.closeDB()
+
+        } catch (e: Exception) {
+            Commons.printException(e)
+        }
+
+        view.updateList(chapters)
+
+    }
+
+    override fun getChapterVerseList(context : Context,bookId : String,chapterId : String) {
+
+        val chapters : MutableList<BibleChapter> = mutableListOf()
+
+        var chapterNumberId = "001"
+
+        chapterNumberId = when {
+            chapterId.toInt() < 9 -> "00"
+            chapterId.toInt() in 10..99 -> "0"
+            else -> ""
+        }
+
+        val chapterActualId = ("$chapterNumberId$chapterId")
+
+        val chapterVerseId : String = "$bookId$chapterActualId"+"001"
+        val chapterToVerseId : String = "$bookId$chapterNumberId"+(chapterId.toInt()+1).toString()+"001"
+        try {
+            val db = DBUtil(context, ApplicationConfigs.DB_NAME)
+            db.createDataBase()
+            db.openDataBase()
+
+            val query = "SELECT verse,id from t_verses where id >= $chapterVerseId and id < $chapterToVerseId"
+
+            val c = db.selectSQL(query)
+            if (c.count > 0) {
+                while (c.moveToNext()) {
+                    val bibleChapter = BibleChapter()
+                    bibleChapter.chapterVerses = c.getString(0)
+                    bibleChapter.chapterId = c.getLong(1)
 
                     chapters.add(bibleChapter)
                 }

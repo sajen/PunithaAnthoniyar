@@ -19,6 +19,9 @@
         android:theme="@style/Theme.PunithaAnthoniyar"
         tools:replace="android:appComponentFactory">
         <activity
+            android:name=".bible.view.BibleDetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".verseofday.VerseOfDayActivity"
             android:exported="true" />
         <activity

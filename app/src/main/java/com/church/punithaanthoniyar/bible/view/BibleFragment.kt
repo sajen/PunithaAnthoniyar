@@ -51,7 +51,7 @@ class BibleFragment: BaseFragment(),IBibleContract.IBibleViewContract {
 
         recyclerview.layoutManager = LinearLayoutManager(activity)
 
-        adapter = BibleListAdapter(data)
+        adapter = BibleListAdapter(requireActivity(),data)
         recyclerview.adapter = adapter
 
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{

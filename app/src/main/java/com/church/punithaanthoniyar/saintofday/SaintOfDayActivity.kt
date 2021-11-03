@@ -53,6 +53,7 @@ class SaintOfDayActivity : BaseActivity() {
             toolbar.setDisplayShowHomeEnabled(true)
             toolbar.title = null
             toolbar.setIcon(null)
+            toolbar.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)
             toolbar.elevation = 0f
 
             setScreenTitle(getString(R.string.saint_of_day))

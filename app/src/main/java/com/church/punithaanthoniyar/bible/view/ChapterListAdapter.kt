@@ -1,5 +1,6 @@
 package com.church.punithaanthoniyar.bible.view
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -11,7 +12,7 @@ import com.church.punithaanthoniyar.R
 import com.church.punithaanthoniyar.bible.model.BibleChapter
 import com.church.punithaanthoniyar.saintofday.model.Saint
 
-class BibleListAdapter (private val context: Context,private val mList: MutableList<BibleChapter>) : RecyclerView.Adapter<BibleListAdapter.ViewHolder>() {
+class ChapterListAdapter (private val context: Context, private val mList: MutableList<BibleChapter>) : RecyclerView.Adapter<ChapterListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -23,19 +24,7 @@ class BibleListAdapter (private val context: Context,private val mList: MutableL
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val item = mList[position]
-        holder.chapterName.text = item.chapterName
-        holder.chapterCount.text = "("+item.count+")"
-
-        holder.itemView.setOnClickListener {
-            val intent = Intent(context,BibleDetailActivity::class.java)
-            intent.putExtra("BookName",item.chapterName)
-            intent.putExtra("BookId",item.chapterId)
-            intent.putExtra("ChapterCount",item.count)
-
-            context.startActivity(intent)
-
-        }
-
+        holder.chapterName.text = ((position+1).toString())+"."+(item.chapterVerses)
     }
 
     override fun getItemCount(): Int {
@@ -44,6 +33,5 @@ class BibleListAdapter (private val context: Context,private val mList: MutableL
 
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val chapterName: AppCompatTextView = itemView.findViewById(R.id.bible_chapters)
-        val chapterCount: AppCompatTextView = itemView.findViewById(R.id.bible_chapters_count)
     }
 }

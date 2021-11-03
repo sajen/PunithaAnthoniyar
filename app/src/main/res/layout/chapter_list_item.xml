@@ -28,24 +28,7 @@
             android:textSize="@dimen/_16sdp"
             app:fontFamily="@font/roboto_medium"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/bible_chapters_count"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/bible_chapters_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="start|center_vertical"
-            android:lineSpacingExtra="@dimen/_8sdp"
-            android:layout_marginRight="@dimen/_20sdp"
-            android:text=""
-            android:textColor="@color/red"
-            android:textSize="@dimen/_14sdp"
-            app:fontFamily="@font/roboto_medium"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/bible_chapters"
-            app:layout_constraintTop_toTopOf="parent" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

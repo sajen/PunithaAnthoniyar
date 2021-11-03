@@ -12,5 +12,6 @@ interface IBibleContract {
     interface IBiblePresenterContract{
         fun setScreenView (view : IBibleContract.IBibleViewContract)
         fun getChapterList(context : Context,pos :Int)
+        fun getChapterVerseList(context : Context,bookId : String,chapterId : String)
     }
 }
