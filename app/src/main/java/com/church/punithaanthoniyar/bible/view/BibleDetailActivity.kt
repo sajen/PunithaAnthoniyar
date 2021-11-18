@@ -2,6 +2,11 @@ package com.church.punithaanthoniyar.bible.view
 
 import android.view.Menu
 import android.view.MenuItem
+import android.view.MotionEvent
+import android.view.View
+import android.view.View.OnTouchListener
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.church.punithaanthoniyar.R
@@ -10,7 +15,6 @@ import com.church.punithaanthoniyar.bible.IBibleContract
 import com.church.punithaanthoniyar.bible.model.BibleChapter
 import com.church.punithaanthoniyar.bible.presenter.BiblePresenter
 import com.church.punithaanthoniyar.databinding.ActivityBibleDetailBinding
-import com.church.punithaanthoniyar.databinding.ActivityVerseOfDayBinding
 import com.church.punithaanthoniyar.utils.Commons
 
 class BibleDetailActivity : BaseActivity(), IBibleContract.IBibleViewContract {
@@ -25,6 +29,9 @@ class BibleDetailActivity : BaseActivity(), IBibleContract.IBibleViewContract {
     private var bookId = ""
     private var bookName = ""
     private var chapterCount = 0
+    private var chapterId = "1";
+
+    private var isPopupShown = false
 
     override fun initializeDi() {
     }
@@ -53,6 +60,48 @@ class BibleDetailActivity : BaseActivity(), IBibleContract.IBibleViewContract {
 
         setUpToolbar()
 
+        val chapterList = mutableListOf<String>()
+
+        for (i in 1..chapterCount){
+            chapterList.add("அதிகாரம் $i")
+        }
+
+        val chapterAdapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1, chapterList)
+        chapterAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line)
+        binding.chapterSpinner.setAdapter(chapterAdapter)
+
+        if (chapterList.isNotEmpty())
+            binding.chapterSpinner.setText(chapterList[0],false)
+
+        /*binding.chapterSpinner.setOnTouchListener { _, event ->
+
+            if (binding.chapterSpinner.isShown)
+                binding.chapterSpinner.dismissDropDown()
+            else {
+                when (event.action) {
+                    MotionEvent.ACTION_UP ->
+                        binding.chapterSpinner.showDropDown()
+                }
+            }
+            true
+        }*/
+
+        binding.chapterSpinner.setOnClickListener {
+            isPopupShown = if (isPopupShown) {
+                binding.chapterSpinner.dismissDropDown()
+                false
+            }else {
+                binding.chapterSpinner.showDropDown()
+                true
+            }
+        }
+
+        binding.chapterSpinner.onItemClickListener = AdapterView.OnItemClickListener { _, _, i, _ ->
+
+            chapterId = (i+1).toString()
+            presenter.getChapterVerseList(this,bookId,chapterId )
+        }
+
         val recyclerview = binding.recyclerView
 
         recyclerview.layoutManager = LinearLayoutManager(this)
@@ -60,7 +109,31 @@ class BibleDetailActivity : BaseActivity(), IBibleContract.IBibleViewContract {
         adapter = ChapterListAdapter(this,data)
         recyclerview.adapter = adapter
 
-        presenter.getChapterVerseList(this,bookId,"1" )
+
+        presenter.getChapterVerseList(this,bookId,chapterId )
+
+        binding.previous.setOnClickListener{
+            if (chapterId.toInt() == 1){
+
+            }else {
+                chapterId = (chapterId.toInt() - 1).toString()
+
+                binding.chapterSpinner.setText(chapterList[chapterId.toInt() - 1],false)
+                presenter.getChapterVerseList(this, bookId, chapterId)
+            }
+        }
+
+        binding.next.setOnClickListener{
+
+            if (chapterCount == chapterId.toInt()){
+
+            }else {
+                chapterId = (chapterId.toInt() + 1).toString()
+
+                binding.chapterSpinner.setText(chapterList[chapterId.toInt() - 1],false)
+                presenter.getChapterVerseList(this, bookId, chapterId)
+            }
+        }
 
     }
 

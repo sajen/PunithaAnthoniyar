@@ -36,7 +36,7 @@ class BiblePresenter : IBibleContract.IBiblePresenterContract {
             db.createDataBase()
             db.openDataBase()
 
-            val query = "SELECT bn,tn_f,chapter_count from t_bookkey where testament_version = '$testamentVer'"
+            val query = "SELECT bn,tn_f,chapters_count from t_bookkey where testament_version = '$testamentVer'"
 
             val c = db.selectSQL(query)
             if (c.count > 0) {

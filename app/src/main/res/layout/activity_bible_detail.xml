@@ -14,13 +14,23 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/previous"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:src="@drawable/ic_baseline_arrow_back_24"/>
+
     <androidx.appcompat.widget.AppCompatAutoCompleteTextView
         android:id="@+id/chapter_spinner"
         android:layout_width="0dp"
         android:hint="Chapters"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/previous"
+        app:layout_constraintEnd_toStartOf="@+id/next"
         android:imeOptions="actionDone"
         android:drawableEnd="@drawable/ic_arrow_drop_down"
         android:drawableRight="@drawable/ic_arrow_drop_down"
@@ -35,6 +45,17 @@
         android:paddingRight="@dimen/_5sdp"
         android:background="@android:color/transparent"
         android:gravity="center|start" />
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toEndOf="@+id/chapter_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:src="@drawable/ic_baseline_arrow_forward_24"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
